@@ -27,6 +27,13 @@ System.register(['./todo'], function(exports_1, context_1) {
                         this.todos.splice(index, 1);
                     }
                 };
+                App.prototype.configureRouter = function (config, router) {
+                    this.router = router;
+                    config.title = "the this";
+                    config.map([
+                        { route: '', moduleId: 'events' }
+                    ]);
+                };
                 return App;
             }());
             exports_1("App", App);
